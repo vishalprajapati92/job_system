@@ -1,0 +1,28 @@
+
+<button class="btn btn-primary" ng-click="backToSearchPage()"> Back search page</button> <br><br>
+
+<div class="panel panel-primary" ng-if="isSaveSucessFull">
+        <div class="panel-heading">{{showMessage}}
+        </div>
+</div>
+
+<div class="panel panel-primary">
+        <div class="panel-heading" > All Jobs  </div>
+                <div class="panel-body">
+                        <table class="table table-bordered">
+                                <tr>
+                                        <th> Title </th>
+                                        <th> Description </th>
+                                        <th> Keyword </th>
+                                        <th> Location </th>
+                                </tr>
+                                <tr ng-repeat="p in postData track by $index">
+                                        <td>  {{p["title"]}} </td>
+                                         <td>   {{p["description"]}} </td>
+                                         <td>   {{p["keyword"]}} </td>
+                                        <td> {{p["location"]}} </td>
+                                       <td> <button  class="btn btn-primary" ng-click="saveJob($index)">Save job</button> </td>
+                                 </tr>
+                        </table>
+         </div>
+</div>

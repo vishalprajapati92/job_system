@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="utf-8">
+            <title> Welcome</title>
+            <script src="https://code.angularjs.org/1.5.5/angular.min.js"></script>
+            <script src="https://code.angularjs.org/1.5.5/angular-route.min.js"></script>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <script src="./js/home.js"></script>
+            
+        </head>
+        <body>
+                
+                <div ng-app="jobManagement" class="container">
+                        <div ng-controller="cntForHomepage">
+                                <h1>Welcome for job</h1>
+                                <nav class="navbar navbar-inverse">
+                                         <div class="container-fluid">
+                                                <div class="navbar-header">
+                                                     <ul class="nav navbar-nav">
+                                                            <li><a href="#/login"ng-if="isNotLogin" > Login </a></li>
+                                                            <li><a href="#/postaJob" ng-if="isUserTypeCompany"> post job </a> </li>
+                                                            <li><a href="#/searchJobs" ng-if="isUserTypeJobSeeker"> search jobs </a> </li>
+                                                            <li><a href="#/register" ng-if="isNotLogin"> Register </a> </li>
+                                                            <li><a href="#/logout" ng-if="isLogin"> Logout </a> </li> 
+                                                       </ul>
+                                                </div>
+                                        </div>
+                                </nav>
+                            <div ng-view="">
+                            </div>
+                        </div>                   
+                </div>
+        </body>
+</html>

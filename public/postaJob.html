@@ -1,0 +1,33 @@
+ <div ng-if="postSuccess" class="panel panel-danger">
+        <div class="panel-heading">
+           {{showMessage}}
+       </div>
+   </div>
+   <form>
+           <div class="panel panel-primary">
+                   <div class="panel-heading"><h2> Post your comapny job </h2> </div>
+                       <div class="panel-body">
+                           <div class="form-group">
+                                   <label for="Jobtitle">Job title </label>
+                                   <input type="text" class="form-control" ng-model="post.title" placeholder="Please enter Username">
+                           </div>
+                           <div class="form-group">
+                                   <label for="description">Job description</label>
+                                   <input type="text" class="form-control" ng-model="post.description" placeholder="Please enter Password">
+                           </div>
+                           <div class="form-group">
+                                <label for="description">Job search keyword</label>
+                                <input type="text" class="form-control" ng-model="post.keyword" placeholder="Please enter Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Job location</label>
+                                <input type="text" class="form-control" ng-model="post.location" placeholder="Please enter Password">
+                            </div>
+                           <div class="form-group">
+                                   <button type="submit" class="btn btn-primary" ng-click="submitJobPost()">Post job</button>
+                           </div>
+   
+                       </div>
+                   </div> 
+           </div> 
+   </form>

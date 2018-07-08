@@ -1,0 +1,20 @@
+<div class="panel panel-primary">
+        <div class="panel-heading" > Your saved job  </div>
+                <div class="panel-body">
+                        <table class="table table-bordered">
+                                <tr>
+                                        <th> Title </th>
+                                        <th> Description </th>
+                                        <th> Keyword </th>
+                                        <th> Location </th>
+                                </tr>
+                                <tr ng-repeat="p in saveJobData">
+                                            <td>  {{p["title"]}} </td>
+                                             <td>   {{p["description"]}} </td>
+                                             <td>   {{p["keyword"]}} </td>
+                                            <td> {{p["location"]}} </td>
+                                </tr>
+                        </table>
+         </div>
+</div>
+       
